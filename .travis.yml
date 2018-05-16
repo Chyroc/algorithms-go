@@ -1,0 +1,13 @@
+language: go
+sudo: required
+
+go:
+  - 1.10.x
+
+script:
+  - go test -v $(go list ./...)
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
